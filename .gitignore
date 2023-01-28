@@ -1,2 +1,14 @@
+# Node modules
 node_modules
+
+# Distribution directory
 dist
+
+# .DS_Store files
+.DS_Store
+
+# Idea
+.idea
+
+# Visual Studio Code
+.vscode
