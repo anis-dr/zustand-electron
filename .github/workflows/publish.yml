@@ -3,9 +3,11 @@ name: Publish
 on:
   push:
     branches:
-      - "main"
+      - "master"
 
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   publish:
@@ -25,4 +27,4 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm run build
+          publish: pnpm run 
